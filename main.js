@@ -24,7 +24,7 @@ let catBreed = ""
 
 
 function getDetails() {
-    catName = catNames[Math.ceil(Math.random() * catNames.length)]
+    catName = catNames[Math.ceil(Math.random() * catNames.length -1)]
     document.querySelector("#cat-name").innerText = catName
 
     let maxAge = 20
@@ -34,7 +34,7 @@ function getDetails() {
 
     document.querySelector("#cat-sex").innerText = `Gender: ${catSex}`
     document.querySelector("#cat-age").innerText = `Age: ${catAge}`
-    document.querySelector("#cat-breed").innerText = `Breed: ${catBreed}`
+    document.querySelector("#cat-breed").innerText = `Breed/color: ${catBreed}`
     getImage(catBreed)
 }
 
