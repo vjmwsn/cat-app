@@ -9,7 +9,7 @@ body {
 
     flex-wrap: nowrap;
     padding: 16px 16px;
-    border-radius: 16px;
+    border-radius: 28px;
     border: 1rem solid;
     border-color: rgb(165, 241, 216);
 
@@ -29,7 +29,7 @@ img {
 }
 
 .details {
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
 #accept-button {
@@ -65,4 +65,8 @@ img {
 
 #cat-name {
     text-align: center;
+}
+
+#image {
+    border-radius: 16px;
 }

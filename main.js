@@ -11,14 +11,14 @@ let catNames = [
     "Bandit", "Ace", "Maverick", "Jinx", "Viper", "Onyx", "Rebel", "Fang", "Diesel", "Blade"
   ];
 
-  let sexes = ["male", "female", "Forklift Certified"]
+  let sexes = ["male","male","female","female","Forklift Certified"]
 
 // chatgpt is great for generating names
 
 let catName = ""
 let catSex = ""
 let catImage = ""
-let catBreeds = ["Orange","Bengal","Blackcat","Maine Coon","Tabby","Tuxedo"]
+let catBreeds = ["Orange","Bengal","Black","Maine Coon","Tabby","Tuxedo"]
 let catBreed = ""
 
 
@@ -35,11 +35,13 @@ function getDetails() {
     document.querySelector("#cat-sex").innerText = `Gender: ${catSex}`
     document.querySelector("#cat-age").innerText = `Age: ${catAge}`
     document.querySelector("#cat-breed").innerText = `Breed: ${catBreed}`
+    getImage(catBreed)
 }
+
 
 getDetails()
 
 function getImage (tag) {
-    catImage = `https://cataas.com/cat/${tag}`
+    catImage = `https://cataas.com/cat/${tag}?type=small`
     document.querySelector("#image").src = catImage
 }
