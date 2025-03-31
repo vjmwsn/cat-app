@@ -1,6 +1,12 @@
 body {
     background-color: aliceblue;
-}
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 5px;
+    font-style: normal;
+  }
+
 
 .card {
     background-color: rgb(215, 245, 235);
@@ -12,12 +18,14 @@ body {
     border-radius: 28px;
     border: 1rem solid;
     border-color: rgb(165, 241, 216);
+    margin-left: auto; margin-right: auto;
 
 
 }
 
 img {
     width: 300px;
+    max-height: 400px;
 }
 
 #cat-name {
@@ -59,8 +67,8 @@ img {
 }
 
 #buttons {
-    display: flex
-    
+    display: flex;
+    padding-top: 0.5rem;
 }
 
 #cat-name {

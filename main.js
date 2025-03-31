@@ -13,14 +13,17 @@ let catNames = [
 
   let sexes = ["male","male","female","female","Forklift Certified"]
 
+  let catBreeds = ["Orange","Bengal","Black","Maine coon","Tabby","Tuxedo"]
+
+  let deniedCats = []
+  let acceptedCats = []
+
 // chatgpt is great for generating names
 
 let catName = ""
 let catSex = ""
 let catImage = ""
-let catBreeds = ["Orange","Bengal","Black","Maine Coon","Tabby","Tuxedo"]
 let catBreed = ""
-
 
 
 function getDetails() {
@@ -33,15 +36,33 @@ function getDetails() {
     catAge = Math.ceil(Math.random() * maxAge) 
 
     document.querySelector("#cat-sex").innerText = `Gender: ${catSex}`
-    document.querySelector("#cat-age").innerText = `Age: ${catAge}`
+    document.querySelector("#cat-age").innerText = `Age: ${catAge} years old`
     document.querySelector("#cat-breed").innerText = `Breed/color: ${catBreed}`
     getImage(catBreed)
+
+    console.log("woop")
+}
+
+function getImage (tag) { 
+    catImage = `https://cataas.com/cat/${tag}?type=small`
+    document.querySelector("#image").src = catImage
 }
 
 
 getDetails()
 
-function getImage (tag) {
-    catImage = `https://cataas.com/cat/${tag}?type=small`
-    document.querySelector("#image").src = catImage
+let acceptButton = document.querySelector("#accept-button")
+    acceptButton.addEventListener("click", acceptCat)
+
+let denyButton = document.querySelector("#dislike")
+    denyButton.addEventListener("click", denyCat)
+
+function acceptCat() {
+    acceptedCats.push(catName)
+    getDetails()
+}
+
+function denyCat() {
+    deniedCats.push(catName)
+    getDetails()
 }
