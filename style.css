@@ -1,0 +1,53 @@
+body {
+    background-color: aliceblue;
+}
+
+.card {
+    background-color: rgb(215, 245, 235);
+    max-height: 900px;
+    max-width: 300px;
+
+    flex-wrap: nowrap;
+    padding: 16px 16px;
+    border-radius: 16px;
+    border: 1rem solid;
+    border-color: rgb(165, 241, 216);
+
+
+}
+
+img {
+    width: 300px;
+}
+
+#cat-name {
+    flex-wrap: wrap;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+#cat-description {
+    margin: 1rem;
+}
+
+#accept-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90px;
+
+}
+
+.round-button {
+    width: 60px;
+    height: 60px;
+    background-color: #00ff7f;
+    border: solid 5px;
+    border-radius: 30px;
+    border-color: aquamarine;
+}
+
+
+
